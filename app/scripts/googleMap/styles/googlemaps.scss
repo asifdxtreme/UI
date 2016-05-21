@@ -1,0 +1,130 @@
+.body-content{
+	.container-fluid{
+		.legends{
+			z-index: 1;
+		    position: fixed;
+		    top: 2%;
+		    right: 1%;
+		}
+		.md-sidenav-right.md-whiteframe-z2.legends-right{
+			bottom: auto;
+		}
+		.panel.legends-data{
+			margin-bottom: 0px;
+			.panel-body{
+				padding: 0;
+				.list-group{
+					.list-group-item{
+						.icon-element{
+							height: 20px; 
+							width: 20px;
+							margin-right: 10px;
+						}
+						.circle{
+							border: 1px solid #ccc;
+							border-radius: 50%;
+							background-color: #ccc;
+						}
+						.circle-green{
+							border: 1px solid green;
+							background-color: green;
+						}
+						.circle-orange{
+							border: 1px solid orange;
+							background-color: orange;
+						}
+						.circle-red{
+							border: 1px solid red;
+							background-color: red;
+						}
+						.connection{
+							letter-spacing: -2px;
+							color: #5bc0de;
+						}
+					}
+				}
+			}
+		}
+		.fabSpeedDialdemoBasicUsage .text-capitalize {
+		  text-transform: capitalize; 
+		}
+		.fabSpeedDialdemoBasicUsage .md-fab:hover, .fabSpeedDialdemoBasicUsage .md-fab.md-focused {
+		  background-color: #000 !important; 
+		}
+		.fabSpeedDialdemoBasicUsage p.note {
+		  font-size: 1.2rem;
+		}
+		.fabSpeedDialdemoBasicUsage .lock-size {
+		  min-width: 300px;
+		  min-height: 300px;
+		  width: 300px;
+		  height: 300px;
+		  margin-left: auto;
+		  margin-right: auto; 
+		}
+		.googlemapsdiv{
+			position:fixed !important;
+			position:absolute;
+			top:0;
+			right:0;
+			bottom:0;
+			left:0;
+			.label {
+				margin: 10px 0 0 14px;
+			    font-size: 12px;
+			    padding: .3em .6em .3em;
+			}
+			.list-group{
+				.list-group-item{
+					color: #000;
+				}
+			}
+			.badge{
+				background-color: #000;
+				margin-left: 6px;
+				opacity: 0.7;
+				font-weight: normal !important;
+				padding: 6px;
+				.latencyValue{
+					padding-left: 4px;
+					font-size: 90%;
+				}
+				.spin {
+				    -webkit-animation: spin 1.65s infinite linear;
+				    -moz-animation: spin 1.65s infinite linear;
+				    -o-animation: spin 1.65s infinite linear;
+				    animation: spin 1.65s infinite linear;
+				    -webkit-transform-origin: 50% 50%;
+				    transform-origin:50% 50%;
+				    -ms-transform-origin:50% 50%; /* IE 9 */
+				}
+				@-moz-keyframes spin {
+				    from {
+				      -moz-transform: rotate(0deg);
+				    }
+				    to {
+				      -moz-transform: rotate(360deg);
+				    }
+				}
+
+				@-webkit-keyframes spin {
+				    from {
+				      -webkit-transform: rotate(0deg);
+				    }
+				    to {
+				      -webkit-transform: rotate(360deg);
+				    }
+				}
+
+				@keyframes spin {
+				    from {
+				      transform: rotate(0deg);
+				    }
+				    to {
+				      transform: rotate(360deg);
+				    }
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,80 @@
+<div class="legends">
+   <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+        <md-button class="md-fab md-primary md-mini" aria-label="Map Legends" ng-click="toggleRight()">
+            <ng-md-icon icon="apps" style="fill: #fff; line-height: 60px;" size="30"></ng-md-icon> 
+        </md-button>
+        
+        <md-button class="md-fab md-primary md-mini" aria-label="DC Utilization Graphs" ng-click="showTabDialog($event)">
+          <ng-md-icon icon="show_chart" style="fill: #fff; line-height: 60px;" size="30"></ng-md-icon> 
+        </md-button>
+    </section>
+</div>
+
+<div class="googlemapsdiv" id="gmaps"></div>
+
+<div layout="column" ng-cloak>
+  <section layout="row" flex>
+    <md-sidenav class="md-sidenav-right md-whiteframe-z2 legends-right" md-component-id="right">
+      <md-toolbar class="md-theme-light">
+        <div class="md-toolbar-tools">
+          <h1 class="md-toolbar-tools">Map Legends</h1>
+          <span flex="" class="flex"></span>
+          <md-button class="md-icon-button" ng-click="closeMDLeft()">
+            <md-icon class="glyphicon glyphicon-remove-circle" aria-label="Close dialog"></md-icon>
+          </md-button>
+        </div>
+      </md-toolbar>
+      <md-content layout-padding>
+        <md-content>
+          <div class="panel legends-data">
+              <div class="panel-body">
+                <div class="list-group">
+                  <li class="list-group-item"> 
+                    <div class="pull-left icon-element circle">
+                    </div> 
+                    <p class="">Represents a Data Center</p>
+                  </li>
+                  <li class="list-group-item"> 
+                    <div class="pull-left icon-element circle">
+                    </div> 
+                    <p class="">Bouncing Data Center represents that this DC has maximum resources</p>
+                  </li>
+                  <li class="list-group-item"> 
+                    <div class="pull-left icon-element circle circle-green">
+                    </div> 
+                    <p class="">Represents a Healthy Data Center</p>
+                  </li>
+                  <li class="list-group-item"> 
+                    <div class="pull-left icon-element circle circle-orange">
+                    </div>
+                    <p class="">Represents that a Data Center is out of resources</p>
+                  </li>
+                  <li class="list-group-item"> 
+                    <div class="pull-left icon-element circle circle-red">
+                    </div>
+                    <p class="">Represents that a Data Center is down and cannot be reached</p>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="pull-left icon-element connection">-----</div>
+                    <p class="">Represents a network connection between the Data Centers</p>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="pull-left icon-element">
+                      <span class="glyphicon glyphicon-send" aria-hidden="true" style="margin-right: 10px;"></span>
+                    </div>
+                    <p class="">Represents the direction of communication between Data Centers</p>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="pull-left icon-element">
+                      <span class="glyphicon glyphicon-refresh" aria-hidden="true" style="margin-right: 10px;"></span>
+                    </div>
+                    <p class="">Displays the latency between respective Data Center every 10s</p>
+                  </li>
+                </div>
+              </div>
+          </div>
+        </md-content>
+      </md-content>
+    </md-sidenav>
+  </section>
+</div>
