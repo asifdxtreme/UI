@@ -1,6 +1,6 @@
 <md-content>
 	<md-card>
-        <md-toolbar>
+        <md-toolbar class="table-header">
             <div class="md-toolbar-tools">
                 {{heading}}
                 <span flex></span>
@@ -32,7 +32,7 @@
         </md-toolbar>
         <fetching-no-data data="appList" info="apiInfo"></fetching-no-data>
         <md-table-container  ng-if="appList == ''" >
-            <table class="data-table-txt-center" data-md-table>
+            <table data-md-table>
                 <thead md-head>
                     <tr md-row>
                         <th md-column ng-repeat="header in headers">
@@ -45,7 +45,7 @@
                         <td md-cell ng-repeat="(key, value) in appData">
                         	
                             <span ng-if="key == 'serviceName'">
-                                <a ui-sref="serviceCenter.serviceInstance.instance({serviceId:'{{appData.serviceId}}'})">{{appData.serviceName}}</a>
+                                <a ui-sref="sc.instances({serviceId:'{{appData.serviceId}}'})">{{appData.serviceName}}</a>
                             </span>
                         	
                             <span ng-if="key != 'serviceId' && key != 'serviceName'">

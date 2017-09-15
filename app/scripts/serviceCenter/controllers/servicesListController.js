@@ -1,9 +1,8 @@
 'use strict';
 angular.module('serviceCenter')
-	.controller('serviceListController', ['$scope', '$mdDialog', '$q', '$log', 'httpService','apiConstant','commonService',
-		function($scope, $mdDialog, $q, $log, httpService, apiConstant,commonService){
+	.controller('servicesListController', ['$scope', 'httpService','apiConstant','commonService',
+		function($scope, httpService, apiConstant,commonService){
 
-			$scope.name = "service center";
 			$scope.appList = 'fetching';
 			$scope.serviceList = 'Service List';
 			$scope.tableHeaders = [
@@ -38,7 +37,7 @@ angular.module('serviceCenter')
 						$scope.services = [];
 						response.data.services.forEach(function(service){
 							var servicesList = {
-								serviceName: service.serviceName.toLowerCase(),
+								serviceName: service.serviceName.charAt(0).toUpperCase()+service.serviceName.slice(1).toLowerCase(),
 								status: service.status.toLowerCase(),
 								appId: service.appId.toLowerCase(),
 								version: service.version,

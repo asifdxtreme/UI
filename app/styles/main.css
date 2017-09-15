@@ -5807,23 +5807,23 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
+  font-family: 'Helvetica','Myriad','Arial';
   /* Custom page footer */
   /* The Modal (background) */
   /* Modal Content */
   /* The Close Button */ }
   body .logo {
     margin: 10px 0px; }
-  body nav {
-    background-color: #290066; }
+  body .navbar {
+    border-radius: unset !important; }
   body .navbar-brand {
     color: #fff; }
   body #sidebar-wrapper {
     height: 100%;
     width: 230px;
     position: fixed;
-    background: white;
-    margin-top: -20px;
-    border-right: 1px solid #ffb3ff; }
+    background: #f5f5f0;
+    margin-top: -20px; }
   body .sidebar-nav {
     position: absolute;
     top: 0;
@@ -5837,25 +5837,28 @@ body {
   body .sidebar-nav li a {
     display: block;
     text-decoration: none;
-    color: #999999; }
+    color: #666666;
+    font-size: 14px; }
   body .sidebar-nav li a:hover {
     text-decoration: none;
     color: black;
     background: #f5f5f0; }
   body .active {
     text-decoration: none;
-    background: #ffe6ff;
-    color: black !important; }
-  body .dropdown a {
-    color: white !important; }
-  body .dropdown a:hover {
-    color: black !important; }
-  body .dropdown-menu a {
-    color: black !important; }
-  body .dropdown-menu a:hover {
-    color: black !important; }
+    background: #fff;
+    color: #009ee0 !important;
+    border-left: 3px solid #009ee0; }
   body .content {
     margin-left: 250px; }
+  body .label {
+    color: white;
+    font-size: 16px; }
+  body .tenant {
+    height: 27px;
+    margin-top: -2px; }
+  body .table-header {
+    height: 50px;
+    min-height: 50px; }
   body .wrap {
     position: relative;
     margin: 0 auto;
@@ -5915,5 +5918,7 @@ body {
   body table.md-table .md-head tr th {
     font-size: 14px;
     color: #000; }
+  body md-toolbar.md-default-theme:not(.md-menu-toolbar), body md-toolbar:not(.md-menu-toolbar) {
+    background-color: #0288D1 !important; }
 
 /*# sourceMappingURL=main.css.map */
