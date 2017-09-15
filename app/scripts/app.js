@@ -9,8 +9,8 @@
  *
  * Main module of the application.
  */
-angular.module('hcf', ['ngAnimate', 'ngMaterial', 'ngAria', 'ngCookies', 'ngMessages', 'ngResource', 'ngRoute', 'ngSanitize', 'ui.router', 'highcharts-ng', 
-    'ngMdIcons', 'pascalprecht.translate', 'hcf.base', 'hcf.googleMap'])
+angular.module('serviceCenter', ['ngAnimate', 'ngMaterial', 'ngAria', 'ngCookies', 'ngMessages', 'ngResource', 'ngRoute', 'ngSanitize', 'ui.router', 
+    'ngMdIcons', 'pascalprecht.translate', 'serviceCenter.router','md.data.table'])
   .config(['$translateProvider', function($translateProvider) {
         $translateProvider.useSanitizeValueStrategy(null);
         $translateProvider.useStaticFilesLoader({
@@ -27,11 +27,6 @@ angular.module('hcf', ['ngAnimate', 'ngMaterial', 'ngAria', 'ngCookies', 'ngMess
     }])
   .run(['$state', '$cookies', '$rootScope', function($state, $cookies, $rootScope) {
     $rootScope.$on('$stateChangeStart', function(e, toState/*, toParams, fromState, fromParams*/) {
-    	if(toState.name === 'base.map'){
-			$rootScope.hideNav = true;
-		}else{
-			$rootScope.hideNav = false;
-		}
         /* May be when the auth is implemented we can use this 
         if (toState.name.indexOf('tool') > -1 && !$cookies.Session) {
             // If logged out and transitioning to a logged in page:

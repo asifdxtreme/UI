@@ -34,9 +34,9 @@ module.exports = function(config) {
       'bower_components/angular-ui-router/release/angular-ui-router.js',
       'bower_components/angular-translate/angular-translate.js',
       'bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js',
-      'bower_components/AngularJS-Toaster/toaster.js',
       'bower_components/angular-material/angular-material.js',
-      'bower_components/highcharts-ng/dist/highcharts-ng.js',
+      'bower_components/angular-material-data-table/dist/md-data-table.js',
+      'bower_components/angular-material-sidemenu/dest/angular-material-sidemenu.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'app/scripts/**/*.js',

@@ -1,19 +1,27 @@
 'use strict';
-angular.module('hcf')
-	.constant('api', {
-		'endPoint' :{
-			'url' : 'http://54.171.57.70:8080/v1'
+angular.module('serviceCenter')
+	.constant('apiConstant', {
+		endPoint :{
+			url : 'http://127.0.0.1',
+			port: '30100'
 		},
-		'dcBootstrap' : {
-			'url' : '/BOOTSTRAP',
-			'method' : 'GET'
-		},
-		'latency' :{
-			'url' : '/LATENCY',
-			'method' : 'GET'
-		},
-		'status' :{
-			'url' : '/STATUS',
-			'method' : 'GET'
+		api : {
+			microservice: {
+				url: 'registry/v3/microservices',
+				method: 'GET'
+			},
+			instances: {
+				url: 'registry/v3/microservices/{{serviceId}}/instances?tags=',
+				method: 'GET'
+			},
+			consumer: {
+				url: 'registry/v3/microservices/{{consumerId}}/providers',
+				method: 'GET'
+			},
+			provider: {
+				url: 'registry/v3/microservices/{{proviserId}}/consumers',
+				method: 'GET'
+			}
 		}
 	});
+	

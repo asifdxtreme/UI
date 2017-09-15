@@ -1,0 +1,59 @@
+<div ng-if="contentStatus === 'fetching'" flex class="cluster-info" layout="row" layout-sm="column">
+    <div flex layout="row">
+        <div flex="25" class="server-data-fetch" layout="column">
+        </div>
+        <div class="server-data-fetch" flex="50" layout="column" layout-align="end center">
+            <md-progress-linear md-mode="indeterminate"></md-progress-linear>
+            <div class="server-data-fetch-text" >Fetching data from the server...</div>
+        </div>
+        <div flex="25" class="server-data-fetch" layout="column">
+        </div>
+    </div>
+</div>
+
+<div ng-if="contentStatus === 'verifying'" flex class="cluster-info" layout="row" layout-sm="column">
+    <div flex layout="row">
+        <md-progress-linear md-mode="indeterminate"></md-progress-linear>
+    </div>
+</div>
+
+<div ng-if="contentStatus === 'requesting'" flex class="cluster-info" layout="row" layout-sm="column">
+    <div flex layout="row">
+        <div flex="5" class="server-data-fetch" layout="column">
+        </div>
+        <div class="server-data-fetch" flex="90" layout="column" layout-align="end center">
+            <md-progress-linear md-mode="indeterminate"></md-progress-linear>
+            <div class="server-data-fetch-text" >Requesting server, please wait..</div>
+        </div>
+        <div flex="5" class="server-data-fetch" layout="column">
+        </div>
+    </div>
+</div>
+
+<div ng-if="contentStatus === 'failed'" flex class="cluster-info" layout="row" layout-sm="column">
+    <div flex layout="row">
+        <div flex="5" class="server-data-fetch" layout="column">
+        </div>
+        <div class="server-data-fetch" flex="90" layout="column" layout-align="end center">
+            <div class="server-data-fetch-text" >Failed to get the resource from the server! Please try again</div>
+        </div>
+        <div flex="5" class="server-data-fetch" layout="column">
+        </div>
+    </div>
+</div>
+
+<div ng-if="contentStatus === 'empty'" flex class="cluster-info" layout="row" layout-sm="column">
+	<div flex layout="row">
+		<div flex="25" class="server-data-fetch" layout="column">
+		</div>
+		<div class="server-data-fetch" flex="50" layout="column" layout-align="end center">
+			<div ng-if="apiInfo && apiInfo != ''" class="server-data-fetch-text">
+				{{apiInfo}}
+				<div ng-bind="'common.emptyData' | translate"></div>
+			</div>
+		 	<div ng-if="!apiInfo || apiInfo == ''" class="server-data-fetch-text" >Response for this request is empty!</div>
+		</div>
+		<div flex="25" class="server-data-fetch" layout="column">
+		 </div>
+	</div>
+</div>

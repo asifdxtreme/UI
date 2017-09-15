@@ -1,0 +1,36 @@
+<md-dialog aria-label="Server API Failed" flex="30">
+	<md-toolbar class="md-warn">
+      <div class="md-toolbar-tools">
+        <i class="fa fa-exclamation-triangle fa-2x padding-right-15"></i>
+        <!-- <h2 ng-bind="'common.error' | translate"></h2> -->
+        <h2>Error</h2>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="closeDialog()" aria-label="Close Dialog">
+          <i class="fa fa-close"></i>
+        </md-button>
+      </div>
+    </md-toolbar>
+    <md-content >
+    	<div layout="column" layout-align="space-around stretch">
+	    	<div class="md-padding">
+    			<!-- <span class="strongText" ng-bind="'httpService.errorCode' | translate"></span> : {{error.status}} -->
+                <span class="strongText">Error Code</span>: {{error.status}}
+	    	</div>
+	    	<div class="md-padding">
+    			<!-- <span class="strongText" ng-bind="'httpService.errorText' | translate"></span> : {{error.statusText}} -->
+                <span class="strongText">Error Text</span>: {{error.statusText}}
+	    	</div>
+	    	<div class="md-padding">
+    			<!-- <span class="strongText" ng-bind="'httpService.errorStatus' | translate" ></span> : {{error.data}} -->
+                <span class="strongText">Error Status</span>: {{error.data}}
+	    	</div>
+    	</div>
+    </md-content>
+    <md-dialog-actions>
+    	<div flex></div>
+	    <md-button ng-click="closeDialog()" class="md-raised md-warn pull-right" aria-label="Close Dialog">
+	      <!-- <span ng-bind="'common.close' | translate"></span> -->
+          <span>Close</span>
+	    </md-button>
+    </md-dialog-actions>
+</md-dialog>

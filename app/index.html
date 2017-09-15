@@ -8,32 +8,33 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
-    <link rel="stylesheet" href="bower_components/AngularJS-Toaster/toaster.css" />
     <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" />
+    <link rel="stylesheet" href="bower_components/angular-material-data-table/dist/md-data-table.css" />
+    <link rel="stylesheet" href="bower_components/angular-material-sidemenu/dest/angular-material-sidemenu.css" />
+    <link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <!-- endbuild -->
   </head>
-  <body ng-app="hcf">
+  <body ng-app="serviceCenter">
     <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
     <!-- Add your site or application content here -->
     
-    <div ng-if="!hideNav" ng-include="'views/header.html'"></div>
-    
     <div class="body-content">
-      <div class="container-fluid" ui-view=""></div>
+      <div ui-view=""></div>
     </div>
     
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
        !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
        (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
-       r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
+       r=n.getElementsByTagNam(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
        }(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
        ga('create', 'Source-Federation');
@@ -42,6 +43,7 @@
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.min.js"></script> -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
@@ -56,31 +58,27 @@
     <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="bower_components/angular-translate/angular-translate.js"></script>
     <script src="bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
-    <script src="bower_components/AngularJS-Toaster/toaster.js"></script>
     <script src="bower_components/angular-material/angular-material.js"></script>
-    <script src="bower_components/highcharts-ng/dist/highcharts-ng.js"></script>
+    <script src="bower_components/angular-material-data-table/dist/md-data-table.js"></script>
+    <script src="bower_components/angular-material-sidemenu/dest/angular-material-sidemenu.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
-    <script src="http://maps.googleapis.com/maps/api/js?libraries=geometry&key=AIzaSyBE_vn6IaEAPkCoBV-P2Hezrag_85uFAQQ"></script>
-    <script src="scripts/customjs/ployLineLabels.js"></script>
-    <script src="http://code.highcharts.com/highcharts.src.js"></script>
+    
+    
     <script src="http://cdnjs.cloudflare.com/ajax/libs/angular-material-icons/0.7.0/angular-material-icons.min.js"></script> 
 
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
     <script src="scripts/app.js"></script>
     <!-- Load common services -->
-    <script src="scripts/services/ajaxService.js"></script>
+    <script src="scripts/services/httpService.js"></script>
+    <script src="scripts/services/commonService.js"></script>
     <script src="apiList/apiList.js"></script>
-    <script src="apiList/mapLegends.js"></script>
-    <!-- Load all the module files here -->
-    <script src="scripts/googleMap/module.js"></script>
-    <script src="scripts/baseModule.js"></script>
-    <!-- Map module controllers, services -->
-    <script src="scripts/baseController.js"></script>
-    <script src="scripts/googleMap/controllers/googleMapsController.js"></script>
-    <script src="scripts/googleMap/controllers/chartsModalController.js"></script>
-    <script src="scripts/googleMap/services/googleMapServices.js"></script>
-
+    <!-- Load all the directive files here -->
+    <script src="scripts/directives/nodataFoundDirective.js"></script>
+    <script src="scripts/directives/tableDirective.js"></script>
+    <!-- Load all the modules controller files here -->
+    <script src="scripts/serviceCenter/controllers/serviceListController.js"></script>
+    <script src="scripts/scRouterConfig.js"></script>
     <!-- endbuild -->
 </body>
 </html>
