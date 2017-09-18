@@ -32,7 +32,8 @@
             <img class="logo" src="images/sc.png" height="80px" width="200px">
         </li>
         <li>
-            <a ui-sref="sc.allServices"  ui-sref-active="active">Services</a>
+            <a ui-sref="sc.allServices"  ui-sref-active="active" ng-class="[{active: $state.current.name === 'sc.info.instance'},
+            {activeProvider: $state.current.name === 'sc.info.provider'}, {activeConsumer: $state.current.name === 'sc.info.consumer'}]">Services</a>
         </li>
         <li>
             <a ui-sref="sc.allInstances" ui-sref-active="active">Instances</a>

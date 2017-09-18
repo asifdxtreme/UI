@@ -1,0 +1,18 @@
+<table class="table table-bordered table-responsive margin20" >
+	<thead class="infoTableHead">
+		<th>Service Name</th>
+		<th>Application</th>
+		<th>Version</th>
+		<th>Created</th>
+		<th>Description</th>
+	</thead>
+	<tbody>
+		<tr ng-repeat="consumer in consumers">
+			<td>{{consumer.serviceName | lowercase}}</td>
+			<td>{{consumer.status | lowercase}}</td>
+			<td>{{consumer.version}}</td>
+			<td>{{convertTime(consumer.timestamp)}}</td>
+			<td>{{consumer.description || '-' }}</td>
+		</tr>
+	</tbody>
+</table>

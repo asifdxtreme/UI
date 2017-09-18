@@ -1,1 +1,35 @@
-{{name}}
+<div class="row serviceInfo">
+  <div class="col-md-1 details">
+    <h1>{{currentServiceDetail.serviceName | limitTo : 1 : 0}}</h1>
+  </div>
+  <div class="col-md-10">
+  	<ul>
+  		<li><strong>{{currentServiceDetail.serviceName | uppercase}}</strong></li>
+  		<li>Application: {{currentServiceDetail.appId}}</li>
+  		<li>version: {{currentServiceDetail.version}}</li>
+  		<li>Created: {{currentServiceDetail.createdAt}}</li>
+  	</ul>
+  </div>
+</div>
+
+<div class="serviceInfoTab" ng-cloak>
+  <md-content>
+    <md-tabs md-dynamic-height md-border-bottom>
+      <md-tab label="SERVICE INSTANCES({{instances.length}})" ng-click="showInstance()">
+        <md-content>
+         <div ui-view="instance"></div>
+        </md-content>
+      </md-tab>
+      <md-tab label="SERVICE PROVIDERS({{providers.length}})" ng-click="showProvider()">
+        <md-content>
+          <div ui-view="provider"></div>
+        </md-content>
+      </md-tab>
+      <md-tab label="SERVICE CONSUMERS({{consumers.length}})" ng-click="showConsumer()">
+        <md-content>
+          <div ui-view="consumer"></div>
+        </md-content>
+      </md-tab>
+    </md-tabs>
+  </md-content>
+</div>

@@ -45,7 +45,7 @@
                         <td md-cell ng-repeat="(key, value) in appData">
                         	
                             <span ng-if="key == 'serviceName'">
-                                <a ui-sref="sc.instances({serviceId:'{{appData.serviceId}}'})">{{appData.serviceName}}</a>
+                                <a ui-sref="sc.info.instance({serviceId:'{{appData.serviceId}}'})">{{appData.serviceName}}</a>
                             </span>
                         	
                             <span ng-if="key != 'serviceId' && key != 'serviceName'">

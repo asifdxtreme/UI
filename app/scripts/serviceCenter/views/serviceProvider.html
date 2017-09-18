@@ -1,0 +1,18 @@
+<table class="table table-bordered table-responsive margin20" >
+	<thead class="infoTableHead">
+		<th>Service Name</th>
+		<th>Application</th>
+		<th>Version</th>
+		<th>Created</th>
+		<th>Description</th>
+	</thead>
+	<tbody>
+		<tr ng-repeat="provider in providers">
+			<td>{{provider.serviceName | lowercase}}</td>
+			<td>{{provider.status | lowercase}}</td>
+			<td>{{provider.version}}</td>
+			<td>{{convertTime(provider.timestamp)}}</td>
+			<td>{{provider.description || '-' }}</td>
+		</tr>
+	</tbody>
+</table>

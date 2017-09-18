@@ -10,7 +10,7 @@
  * Main module of the application.
  */
 angular.module('serviceCenter', ['ngAnimate', 'ngMaterial', 'ngAria', 'ngMessages', 'ngResource', 'ngRoute', 'ngSanitize', 'ui.router', 
-    'ngMdIcons', 'pascalprecht.translate', 'serviceCenter.router','md.data.table'])
+    'ngMdIcons', 'pascalprecht.translate', 'serviceCenter.router','md.data.table', 'angular-json-tree'])
   .config(['$translateProvider', function($translateProvider) {
         $translateProvider.useSanitizeValueStrategy(null);
         $translateProvider.useStaticFilesLoader({

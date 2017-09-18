@@ -34,6 +34,7 @@ module.exports = function(config) {
       'bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js',
       'bower_components/angular-material/angular-material.js',
       'bower_components/angular-material-data-table/dist/md-data-table.js',
+      'bower_components/angular-json-tree/dist/angular-json-tree.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'app/scripts/**/*.js',
